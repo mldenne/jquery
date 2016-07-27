@@ -7,9 +7,8 @@ $(document).ready(function(){
 })
 
 function displayData(arr) {
-    // $('#stuff h1').remove()
     $.each(arr, function(i, posts){
-      console.log(posts)
-      $('#chirps').append("<p>" + posts.body + "</p>")
-    })
-  }
+      // console.log(posts)
+      $('#chirps').append("<div class='row'><div class='col-md-2'><img class='img-responsive' src=" + posts.user.bio_image + "/></div><div class='col-md-10'><p>" + posts.body + "</p><p> created by" + posts.user.username + "created at" + posts.created_at + "</p></div></div>")
+  })
+}
