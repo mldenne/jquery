@@ -1,22 +1,62 @@
-Intro to jQuery & ajax
+# Intro to jQuery & AJAX
 
-Let's adjust our Chirp API slightly and use jQuery and JavaScript to output a public timeline.
+In this assignment, the Chirp API is adjusted to output a public timeline using jQuery and JavaScript.
 
-Deliverables
+## Deliverables
 
-A site that uses your Chirp API to dynamically display a public timeline
-A link to a GitHub repo or a GitHub Pages URL for said site
-Requirements
+* A site that uses the Chirp API to dynamically display a public timeline
+* A link to a GitHub repo or a GitHub Pages URL for said site
 
-Explorer Mode
+## Requirements
 
-Your Chirp API should now show a timeline of all posts if a request is made to the timeline endpoint with any authentication. Don't forget to deploy this adjustment to Heroku. And to update your documentation.
-Your combination of HTML, JavaScript and CSS should use that new unauthenticated endpoint to display a list of chirps in a nicely formatted way (this is generally code for bootstrap).
-You should display the user avatar, the body of the chirp, the username of the user who posted the chirp and the time and date the chirp was posted
-Use jQuery to help make the above easier.
+### Explorer Mode (completed)
 
-Adventure Mode
+* Chirp API should show a timeline of all posts if a request is made to the timeline endpoint with any authentication.
 
-Deploy your site to GitHub pages
-Format the timestamp nicely using moment.js
-Use Handlebars as a template for your chirps
+  * Endpoint: `GET /posts`
+
+```{
+  "posts": [
+    {
+      "id": 1,
+      "body": "Example text",
+      "created_at": "2016-07-25T15:31:27.813Z",
+      "user": {
+        "id": 1,
+        "name": "Example Example",
+        "username": "example",
+        "bio_image": "example image",
+        "bio": "Example bio.",
+        "post_count": 20,
+        "followers_count": 0,
+        "followees_count": 1
+      }
+    }
+  ]
+}
+  ```
+
+* Deploy adjustment to Heroku.
+
+  * https://gentle-basin-30331.herokuapp.com/posts
+
+* Update documentation.
+
+* Use of HTML, JavaScript and CSS for formatting. Bootstrap is preferred.
+
+* Display includes:
+
+  * User avatar (posts.user.bio_image)
+  * Body of the chirp (posts.body)
+  * Username of the user who posted the chirp (posts.user.username)
+  * Created by time and date stamp (posts.created_by)
+
+* Use JQuery
+
+### Adventure Mode (partially completed)
+
+  * Deploy your site to GitHub pages (under construction at https://mldenne.github.io/jquery/)
+
+  * Format the timestamp using moment.js (completed)
+
+  * Use Handlebars as a template for chirps (downloaded template)
